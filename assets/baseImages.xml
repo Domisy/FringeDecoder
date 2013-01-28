@@ -1,0 +1,11 @@
+<root>
+<item image="appleGlyph.png" subimagesFile="appleList.xml"/>
+<item image="butterflyGlyph.png" subimagesFile="butterflyList.xml"/>
+<item image="flowerGlyph.png" subimagesFile="flowerList.xml"/>
+<item image="frogGlyph.png" subimagesFile="frogList.xml"/>
+<item image="handGlyph.png" subimagesFile="handList.xml"/>
+<item image="hornGlyph.png" subimagesFile="hornList.xml"/>
+<item image="leafGlyph.png" subimagesFile="leafList.xml"/>
+<item image="seahorseGlyph.png" subimagesFile="seahorseList.xml"/>
+<item image="smokeGlyph.png" subimagesFile="smokeList.xml"/>
+</root>
