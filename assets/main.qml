@@ -7,6 +7,7 @@ NavigationPane {
     Menu.definition: MenuDefinition {
         // Add a Help action
         helpAction: HelpActionItem {
+            title: "About"
             onTriggered: {
                 aboutDialog.show()
             }
@@ -61,39 +62,36 @@ NavigationPane {
                 verticalAlignment: VerticalAlignment.Center
             }
             Container {
-                verticalAlignment: VerticalAlignment.Fill
-                horizontalAlignment: HorizontalAlignment.Fill
-                layout: AbsoluteLayout {
-                    //orientation: LayoutOrientation.LeftToRight
+                preferredHeight: 140
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
                 }
                 background: myBackground
-                TextArea {
-                    preferredWidth: 660
-                    layoutProperties: AbsoluteLayoutProperties {
+                Container {
+                    topPadding: 5
+                    TextArea {
+                        //preferredWidth: 660
+                        editable: true
+                        id: fringeTextArea
+                        touchPropagationMode: TouchPropagationMode.PassThrough
+                        hintText: "Fringe Decoder"
+                        textStyle.fontSize: FontSize.XXLarge
+                        textStyle.textAlign: TextAlign.Center
+                        textStyle.color: Color.White
+                        backgroundVisible: false
+                        //preferredHeight: 135
                     }
-                    editable: true
-                    id: fringeTextArea
-                    touchPropagationMode: TouchPropagationMode.PassThrough
-                    hintText: "Fringe Decoder"
-                    textStyle.fontSize: FontSize.XXLarge
-                    textStyle.textAlign: TextAlign.Center
-                    textStyle.lineHeight: 1.5
-                    textStyle.color: Color.White
-                    backgroundVisible: false
-                    preferredHeight: 150
-                    verticalAlignment: VerticalAlignment.Bottom
-
-                    ///preferredWidth:
                 }
-                Button {
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 660
-                        positionY: 25
-                    }
-                    preferredWidth: 20
-                    text: "X"
-                    onClicked: {
-                        fringeTextArea.text = ""
+                Container {
+                    verticalAlignment: VerticalAlignment.Center
+                    rightPadding: 15
+                    Button {
+                        preferredWidth: 20
+                        preferredHeight: 20
+                        text: "X"
+                        onClicked: {
+                            fringeTextArea.text = ""
+                        }
                     }
                 }
             }
